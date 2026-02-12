@@ -24,7 +24,7 @@ st.sidebar.header("Settings")
 uploaded_file = st.sidebar.file_uploader("Upload Student Data (CSV)", type=["csv"])
 st.sidebar.info("Upload 'test_data.csv'.")
 
-# Model Selection
+# Model Selection - Changing this dropdown automatically triggers a rerun in Streamlit
 model_options = [
     "Logistic Regression", 
     "Decision Tree", 
@@ -57,11 +57,18 @@ if not loaded_models:
     st.error("Error: Trained models not found.")
     st.stop()
 
+# Cache the uploaded file processing so changing the dropdown is instantaneous
+@st.cache_data
+def load_uploaded_data(file):
+    # seek(0) resets the file buffer in case of reruns
+    file.seek(0)
+    return pd.read_csv(file, sep=None, engine='python')
+
 # Main Logic & Inference
 if uploaded_file is not None:
     try:
-        # Read uploaded CSV (Handling both semicolon and comma separated values)
-        data = pd.read_csv(uploaded_file, sep=None, engine='python')
+        # Read uploaded CSV efficiently via the cached function
+        data = load_uploaded_data(uploaded_file)
         st.write("### Uploaded Data Preview (First 5 Rows)")
         st.dataframe(data.head())
         
@@ -90,7 +97,7 @@ if uploaded_file is not None:
         # Scale Features
         X_input_scaled = scaler.transform(X_test)
 
-        # Make Predictions
+        # Make Predictions based on the currently selected model
         model = loaded_models[selected_model_name]
         preds = model.predict(X_input_scaled)
         probs = model.predict_proba(X_input_scaled)
