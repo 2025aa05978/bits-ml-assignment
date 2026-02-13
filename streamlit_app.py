@@ -22,7 +22,7 @@ st.sidebar.header("Settings")
 
 # Dataset Upload
 uploaded_file = st.sidebar.file_uploader("Upload Student Data (CSV)", type=["csv"])
-st.sidebar.info("Upload 'test_data.csv'.")
+st.sidebar.info("Upload CSV data.")
 
 # Model Selection - Changing this dropdown automatically triggers a rerun in Streamlit
 model_options = [
