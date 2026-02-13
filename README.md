@@ -36,120 +36,118 @@ Six classification algorithms were implemented to benchmark performance:
 
 ### Comparison Table
 
-_(Note: The values below are indicative. Run train_models.py to get the exact output for your subset/random_state)._
-
 
 <table>
   <tr>
-   <td style="background-color: #f8fafd"><strong>ML Model Name</strong>
+   <td><strong>ML Model Name</strong>
    </td>
-   <td style="background-color: #f8fafd"><strong>Accuracy</strong>
+   <td><strong>Accuracy</strong>
    </td>
-   <td style="background-color: #f8fafd"><strong>AUC (OVR)</strong>
+   <td><strong>AUC (OVR)</strong>
    </td>
-   <td style="background-color: #f8fafd"><strong>Precision</strong>
+   <td><strong>Precision</strong>
    </td>
-   <td style="background-color: #f8fafd"><strong>Recall</strong>
+   <td><strong>Recall</strong>
    </td>
-   <td style="background-color: #f8fafd"><strong>F1 Score</strong>
+   <td><strong>F1 Score</strong>
    </td>
-   <td style="background-color: #f8fafd"><strong>MCC</strong>
-   </td>
-  </tr>
-  <tr>
-   <td style="background-color: #f8fafd"><strong>Logistic Regression</strong>
-   </td>
-   <td style="background-color: #f8fafd">0.7582
-   </td>
-   <td style="background-color: #f8fafd">0.8812
-   </td>
-   <td style="background-color: #f8fafd">0.7201
-   </td>
-   <td style="background-color: #f8fafd">0.6905
-   </td>
-   <td style="background-color: #f8fafd">0.7023
-   </td>
-   <td style="background-color: #f8fafd">0.6120
+   <td><strong>MCC</strong>
    </td>
   </tr>
   <tr>
-   <td style="background-color: #f8fafd"><strong>Decision Tree</strong>
+   <td><strong>Logistic Regression</strong>
    </td>
-   <td style="background-color: #f8fafd">0.6845
+   <td>0.7722
    </td>
-   <td style="background-color: #f8fafd">0.7011
+   <td>0.8884
    </td>
-   <td style="background-color: #f8fafd">0.6120
+   <td>0.7142
    </td>
-   <td style="background-color: #f8fafd">0.6090
+   <td>0.6819
    </td>
-   <td style="background-color: #f8fafd">0.6101
+   <td>0.6902
    </td>
-   <td style="background-color: #f8fafd">0.4901
-   </td>
-  </tr>
-  <tr>
-   <td style="background-color: #f8fafd"><strong>KNN</strong>
-   </td>
-   <td style="background-color: #f8fafd">0.6905
-   </td>
-   <td style="background-color: #f8fafd">0.8231
-   </td>
-   <td style="background-color: #f8fafd">0.6210
-   </td>
-   <td style="background-color: #f8fafd">0.6121
-   </td>
-   <td style="background-color: #f8fafd">0.6150
-   </td>
-   <td style="background-color: #f8fafd">0.5010
+   <td>0.6216
    </td>
   </tr>
   <tr>
-   <td style="background-color: #f8fafd"><strong>Naive Bayes</strong>
+   <td><strong>Decision Tree</strong>
    </td>
-   <td style="background-color: #f8fafd">0.6931
+   <td>0.9344
    </td>
-   <td style="background-color: #f8fafd">0.8415
+   <td>0.9451
    </td>
-   <td style="background-color: #f8fafd">0.6212
+   <td>0.9205
    </td>
-   <td style="background-color: #f8fafd">0.6550
+   <td>0.9237
    </td>
-   <td style="background-color: #f8fafd">0.6300
+   <td>0.9220
    </td>
-   <td style="background-color: #f8fafd">0.5152
-   </td>
-  </tr>
-  <tr>
-   <td style="background-color: #f8fafd"><strong>Random Forest</strong>
-   </td>
-   <td style="background-color: #f8fafd">0.7712
-   </td>
-   <td style="background-color: #f8fafd">0.9015
-   </td>
-   <td style="background-color: #f8fafd">0.7410
-   </td>
-   <td style="background-color: #f8fafd">0.6811
-   </td>
-   <td style="background-color: #f8fafd">0.7015
-   </td>
-   <td style="background-color: #f8fafd">0.6212
+   <td>0.8937
    </td>
   </tr>
   <tr>
-   <td style="background-color: #f8fafd"><strong>XGBoost</strong>
+   <td><strong>KNN</strong>
    </td>
-   <td style="background-color: #f8fafd">0.7815
+   <td>0.7706
    </td>
-   <td style="background-color: #f8fafd">0.9102
+   <td>0.8904
    </td>
-   <td style="background-color: #f8fafd">0.7512
+   <td>0.7391
    </td>
-   <td style="background-color: #f8fafd">0.6950
+   <td>0.6872
    </td>
-   <td style="background-color: #f8fafd">0.7150
+   <td>0.7018
    </td>
-   <td style="background-color: #f8fafd">0.6305
+   <td>0.6190
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Naive Bayes</strong>
+   </td>
+   <td>0.6792
+   </td>
+   <td>0.7992
+   </td>
+   <td>0.5892
+   </td>
+   <td>0.5786
+   </td>
+   <td>0.5749
+   </td>
+   <td>0.4618
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Random Forest</strong>
+   </td>
+   <td>0.9530
+   </td>
+   <td>0.9904
+   </td>
+   <td>0.9520
+   </td>
+   <td>0.9345
+   </td>
+   <td>0.9426
+   </td>
+   <td>0.9234
+   </td>
+  </tr>
+  <tr>
+   <td><strong>XGBoost</strong>
+   </td>
+   <td>0.9514
+   </td>
+   <td>0.9871
+   </td>
+   <td>0.9455
+   </td>
+   <td>0.9357
+   </td>
+   <td>0.9404
+   </td>
+   <td>0.9208
    </td>
   </tr>
 </table>
@@ -161,56 +159,46 @@ _(Note: The values below are indicative. Run train_models.py to get the exact ou
 
 <table>
   <tr>
-   <td style="background-color: #f8fafd"><strong>ML Model Name</strong>
+   <td><strong>ML Model Name</strong>
    </td>
-   <td style="background-color: #f8fafd"><strong>Observation about model performance</strong>
-   </td>
-  </tr>
-  <tr>
-   <td style="background-color: #f8fafd"><strong>Logistic Regression</strong>
-   </td>
-   <td style="background-color: #f8fafd">Serves as a strong baseline, performing surprisingly well on this multi-class dataset due to the scaling of numeric semester data.
+   <td><strong>Observation about model performance</strong>
    </td>
   </tr>
   <tr>
-   <td style="background-color: #f8fafd"><strong>Decision Tree</strong>
+   <td><strong>Logistic Regression</strong>
    </td>
-   <td style="background-color: #f8fafd">Yielded the lowest performance and lowest AUC due to high variance and overfitting to the training split.
-   </td>
-  </tr>
-  <tr>
-   <td style="background-color: #f8fafd"><strong>KNN</strong>
-   </td>
-   <td style="background-color: #f8fafd">Benefited from feature scaling but struggled slightly with the class imbalance and high dimensionality (36 features).
+   <td>Performed moderately well (77% accuracy) and acts as a solid baseline, but struggles to capture more complex, non-linear relationships compared to tree-based models.
    </td>
   </tr>
   <tr>
-   <td style="background-color: #f8fafd"><strong>Naive Bayes</strong>
+   <td><strong>Decision Tree</strong>
    </td>
-   <td style="background-color: #f8fafd">Maintained a decent ROC AUC score but struggled with Precision/Recall, likely due to feature dependency (e.g., 1st sem vs 2nd sem grades).
-   </td>
-  </tr>
-  <tr>
-   <td style="background-color: #f8fafd"><strong>Random Forest</strong>
-   </td>
-   <td style="background-color: #f8fafd">One of the top performers; effectively handled feature interactions without overfitting, providing high predictive stability.
+   <td>Showed excellent performance (~93.4% accuracy). The data contains strong, hierarchical decision boundaries (e.g., specific grade thresholds) that single trees capture highly effectively.
    </td>
   </tr>
   <tr>
-   <td style="background-color: #f8fafd"><strong>XGBoost</strong>
+   <td><strong>KNN</strong>
    </td>
-   <td style="background-color: #f8fafd">Achieved the highest overall metrics. The gradient boosting approach handled the imbalanced 3-class target highly effectively.
+   <td>Performed similarly to Logistic Regression (77% accuracy). It handles the feature space well after standardization but falls short of the precision offered by ensemble techniques.
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Naive Bayes</strong>
+   </td>
+   <td>The weakest performer on this dataset (~67.9% accuracy). The algorithm's assumption of feature independence heavily hurts its performance here, as features like 1st-semester and 2nd-semester grades are strongly correlated.
+   </td>
+  </tr>
+  <tr>
+   <td><strong>Random Forest</strong>
+   </td>
+   <td>Top Performer! Achieved the highest accuracy (95.3%) and a near-perfect AUC (0.9904). It successfully leveraged feature bagging to eliminate variance while easily mapping the complex relationships.
+   </td>
+  </tr>
+  <tr>
+   <td><strong>XGBoost</strong>
+   </td>
+   <td>Exceptional performance, almost tying with Random Forest. The gradient boosting approach handled the imbalanced 3-class target highly efficiently, resulting in a very high MCC score (0.9208).
    </td>
   </tr>
 </table>
 
-
-
-## How to Run the Application
-
-
-
-1. **Install Dependencies**: pip install -r requirements.txt
-2. **Train Models**: Place data.csv in the root folder, then run python train_models.py. This will create the model/ folder containing the saved .pkl files.
-3. **Run Streamlit App**: Execute streamlit run streamlit_app.py.
-4. **Test**: Use the UI to upload the test_data_sample.csv (generated in step 2) to evaluate the models interactively.
