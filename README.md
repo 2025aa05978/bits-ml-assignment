@@ -173,7 +173,7 @@ Six classification algorithms were implemented to benchmark performance:
   <tr>
    <td><strong>Decision Tree</strong>
    </td>
-   <td>Showed excellent performance (~93.4% accuracy). The data contains strong, hierarchical decision boundaries (e.g., specific grade thresholds) that single trees capture highly effectively.
+   <td>Showed excellent performance (~93% accuracy). The data contains strong, hierarchical decision boundaries (e.g., specific grade thresholds) that single trees capture highly effectively.
    </td>
   </tr>
   <tr>
@@ -185,19 +185,19 @@ Six classification algorithms were implemented to benchmark performance:
   <tr>
    <td><strong>Naive Bayes</strong>
    </td>
-   <td>The weakest performer on this dataset (~67.9% accuracy). The algorithm's assumption of feature independence heavily hurts its performance here, as features like 1st-semester and 2nd-semester grades are strongly correlated.
+   <td>The weakest performer on this dataset (~67% accuracy). The algorithm's assumption of feature independence heavily hurts its performance here, as features like 1st-semester and 2nd-semester grades are strongly correlated.
    </td>
   </tr>
   <tr>
    <td><strong>Random Forest</strong>
    </td>
-   <td>Top Performer! Achieved the highest accuracy (95.3%) and a near-perfect AUC (0.9904). It successfully leveraged feature bagging to eliminate variance while easily mapping the complex relationships.
+   <td>Achieved the highest accuracy (95%) and a near-perfect AUC (0.9904). It successfully leveraged feature bagging to eliminate variance while easily mapping the complex relationships.
    </td>
   </tr>
   <tr>
    <td><strong>XGBoost</strong>
    </td>
-   <td>Exceptional performance, almost tying with Random Forest. The gradient boosting approach handled the imbalanced 3-class target highly efficiently, resulting in a very high MCC score (0.9208).
+   <td>Good performance, almost on par with Random Forest. The gradient boosting approach handled the imbalanced 3-class target highly efficiently, resulting in a very high MCC score (0.9208).
    </td>
   </tr>
 </table>
